@@ -1,4 +1,4 @@
- 
+/*  
 .text-barlow {
   font-family: 'Barlow Semi Condensed', sans-serif;
 } 
@@ -7,34 +7,45 @@
   font-family: 'Montserrat Variable', sans-serif !important;
 
 }
+  
 .font-400 {
   font-weight: 400;
 }
-
+.white {
+  color: aliceblue !important;
+}
 .font-600 {
   font-weight: 600;
 }
 
 .font-800 {
   font-weight: 800;
-}
+}*/
 
 .active {
   color: #C65FEB;
   text-decoration: underline;
 }
  
-h5 {
-
+/* .nav-header {
   font-size: 16px !important;
   font-family: 'Barlow Semi Condensed', sans-serif !important;
   font-weight: 600;
-}
-
- 
-h3 {
-
+}  */
+/* h1{
   font-size: 35px !important;
   font-family: 'Barlow Semi Condensed', sans-serif !important;
   font-weight: 600;
 }
+h2{
+  font-size: 35px !important;
+  font-family: 'Barlow Semi Condensed', sans-serif !important;
+  font-weight: 600;
+} */
+
+/*  
+h2 {
+  font-size: 35px !important;
+  font-family: 'Barlow Semi Condensed', sans-serif !important;
+  font-weight: 600;
+} */

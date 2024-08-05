@@ -15,29 +15,27 @@ function NavBar() {
   return (
     <div>
       <Flex
-        className="navbar"
-        minWidth="max-content"  
-        alignItems="center"
+        className="navbar"  align={"center"}
       >
         <HStack  p="45px"   spacing="30px">
           <NavLink  to="/about">
             {" "}
-            <h5> About </h5>{" "}
+            <nav-header> About </nav-header>{" "}
           </NavLink>
           <NavLink    to="/services">
             {" "}
-            <h5> Services </h5>{" "}
+            <nav-header> Services </nav-header>{" "}
           </NavLink>{" "}
           <NavLink to="/skills">
             {" "}
-            <h5> Skills</h5>
+            <nav-header> Skills</nav-header>
           </NavLink>
           <NavLink to="/portfolio">
-            <h5> Portfolio</h5>
+            <nav-header> Portfolio</nav-header>
           </NavLink>
           <NavLink to="/contact">
             {" "}
-            <h5>Contact </h5>
+            <nav-header>Contact </nav-header>
           </NavLink>
         </HStack>
 
