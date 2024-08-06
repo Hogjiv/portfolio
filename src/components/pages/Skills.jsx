@@ -1,5 +1,6 @@
 import React from "react";
 import CardComponent from "../CardComponent.jsx";
+import { skills } from "../../skills.jsx";
 import {
   Center,
   Text,
@@ -10,44 +11,51 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
+function createSkill(data) {
+  return (
+    <VStack key={data.id} spacing={3}>
+      <Heading as="h5" textStyle="h5" fontSize="xl" >
+        {data.name}
+      </Heading>
+      <CardComponent 
+       skill={data.skill} image={data.image} />
+    </VStack>
+  );
+}
 
 function Skills() {
   return (
     <Center>
-      <Container
-        maxW="100%" // Занимает всю доступную ширину
+      <Container 
+        maxW="100%"
+        p={4}
         minH="calc(100vh - 66px)"
-        p={3}
-        bg="green.800"
+        pt={3}
         display="flex"
         flexDirection="column"
         alignItems="center"
       >
-        <Heading as="h1" fontSize="3xl" textStyle="h1" mb={4} color="violet">
+        <Heading as="h1" fontSize="3xl" textStyle="h1" mb={3} color="violet">
           Skills
         </Heading>
 
-
-        <Container bg="green.200" color="white" centerContent maxW="1200px">
-          <Text textTransform={"uppercase"}>
-            "md" Container There are many benefits to a joint design and
-            development system. Not only does it bring benefits to the design
-            team, but it also brings benefits to engineering teams. It makes
-            sure that our experiences have a consistent look and feel, not just
-            in our design specs, but in production.
+        <Container  color="white" centerContent maxW="100%" w="900px">
+          <Text textTransform={"uppercase"} pb={3}>
+            My skills cover key areas of web development, UI/UX design, and 3D
+            art. I create functional and engaging projects using modern tools
+            and technologies.
           </Text>
         </Container>
 
-      
-          <VStack> 
-        
-       
-         
-          <CardComponent 
-          skill="one two"
-          name="three foor"
-          > sdkfjdksf</CardComponent>
-          </VStack>
+        <HStack    
+          align="start" 
+          w="100%" 
+          justify="space-around" 
+          wrap="wrap"
+        >
+          {skills.map(createSkill)}
+        </HStack>
+           
       </Container>
     </Center>
   );

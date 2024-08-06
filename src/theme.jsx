@@ -1,6 +1,49 @@
 import { extendTheme } from "@chakra-ui/react";
+import { color } from "framer-motion";
 
 const theme = extendTheme({
+  components: {
+    Button: { 
+      baseStyle: {
+        fontWeight: 'regular',  
+        fontFamily: 'Fjalla One', 
+        bg: "#ffc525",
+        borderRadius: "0px",
+      },
+      // 2. We can add a new button size or extend existing
+      sizes: {
+        xl: {
+          h: '76px',
+          fontSize: 'lg',
+          px: '22px',
+        },
+      },
+      // 3. We can add a new visual variant
+      variants: {
+        'with-shadow': {
+          bg: 'blue.400',
+          boxShadow: '0 0 2px 2px #efdfde',
+        },
+        // 4. We can override existing variants
+        solid: (props: StyleFunctionProps) => ({
+          bg: props.colorMode === 'dark' ? 'green.200' : 'blue.500',
+        }),
+        // 5. We can add responsive variants
+        sm: {
+          bg: 'teal.500',
+          fontSize: 'md',
+        },
+      },
+      // 6. We can overwrite defaultProps
+      defaultProps: {
+        size: 'lg', // default is md
+        variant: 'sm', // default is solid
+        colorScheme: 'green', // default is gray
+      },
+    },
+  },
+ 
+
   space: {
     1: "4px",
     2: "18px",
@@ -8,8 +51,6 @@ const theme = extendTheme({
     4: "45px",
     5: "60px",  
     6: "70px",
-
- 
   },
   fontSizes: {
     xs: "12px",
@@ -44,6 +85,11 @@ const theme = extendTheme({
       textTransform: "uppercase",
       color: "violet",
       fontFamily: 'Montserrat Variable, sans-serif',
+    },
+    h5: {  
+      fontWeight: "medium",
+      textTransform: "uppercase",
+      color: "white",  
     },
     body: { 
       fontSize: "lg", 

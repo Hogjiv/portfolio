@@ -18,12 +18,12 @@ import '@fontsource/barlow-semi-condensed';
 import '@fontsource/barlow-semi-condensed/400.css'; // Regular
 import '@fontsource/barlow-semi-condensed/600.css'; // Semi-bold
 import '@fontsource/barlow-semi-condensed/800.css'; // Bold
-
+import '@fontsource/fjalla-one';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <NavBar></NavBar>
+      <NavBar></NavBar> 
       <Routes>
         <Route path="/" element={<About />}>
           {" "}
