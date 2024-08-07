@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, VStack, Text } from "@chakra-ui/react";
- 
 
 function CardComponent({ skill, image }) {
   return (

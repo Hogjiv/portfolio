@@ -1,4 +1,4 @@
-// skills.jsx
+// skills.js
 export const skills = [
   {
     id: 0,
@@ -14,13 +14,13 @@ export const skills = [
       "Vue3",
       "React",
     ],
-    image: "/skills/coding.png"
+    image: "/skills/coding.png",
   },
   {
     id: 1,
     name: "UI/UX design",
     skill: ["Figma", "CSS", "HTML"],
-    image: "/skills/web-design.png"
+    image: "/skills/web-design.png",
   },
   {
     id: 2,
@@ -39,6 +39,6 @@ export const skills = [
       "LuxCore Render",
       "World Creator",
     ],
-    image: "/skills/3d.png"
-  }
+    image: "/skills/3d.png",
+  },
 ];

@@ -1,12 +1,12 @@
 // components/Navbar.jsx
-import React from 'react';
+import React from "react";
 
-import ButtonComponent from '../ButtonComponent';
-import { Heading, Container, Text, Center, HStack, Stack } from '@chakra-ui/react' 
-function Services() { 
+import ButtonComponent from "../ButtonComponent";
+import { Heading, Container, Text, Center } from "@chakra-ui/react";
+function Services() {
   return (
     <Center>
-      <Container 
+      <Container
         maxW="100%"
         p={4}
         minH="calc(100vh - 66px)"
@@ -19,14 +19,14 @@ function Services() {
           Services
         </Heading>
 
-        <Container  color="white" centerContent maxW="100%" w="900px">
+        <Container color="white" centerContent maxW="100%" w="900px">
           <Text textTransform={"uppercase"} pb={3}>
-          Since I have an extensive background in 3D and am a novice web developer, I can offer various services. Let me know what you're interested in, and I'll be happy to help you.
+            Since I have an extensive background in 3D and am a novice web
+            developer, I can offer various services. Let me know what you're
+            interested in, and I'll be happy to help you.
           </Text>
         </Container>
-        <ButtonComponent> </ButtonComponent>
- 
-           
+        <ButtonComponent />
       </Container>
     </Center>
   );

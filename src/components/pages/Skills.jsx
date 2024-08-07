@@ -1,6 +1,6 @@
 import React from "react";
 import CardComponent from "../CardComponent.jsx";
-import { skills } from "../../skills.jsx";
+import { skills } from "../../skills.js";
 import {
   Center,
   Text,
@@ -14,11 +14,10 @@ import {
 function createSkill(data) {
   return (
     <VStack key={data.id} spacing={3}>
-      <Heading as="h5" textStyle="h5" fontSize="xl" >
+      <Heading as="h5" textStyle="h5" fontSize="xl">
         {data.name}
       </Heading>
-      <CardComponent 
-       skill={data.skill} image={data.image} />
+      <CardComponent skill={data.skill} image={data.image} />
     </VStack>
   );
 }
@@ -26,7 +25,7 @@ function createSkill(data) {
 function Skills() {
   return (
     <Center>
-      <Container 
+      <Container
         maxW="100%"
         p={4}
         minH="calc(100vh - 66px)"
@@ -39,7 +38,7 @@ function Skills() {
           Skills
         </Heading>
 
-        <Container  color="white" centerContent maxW="100%" w="900px">
+        <Container color="white" centerContent maxW="100%" w="900px">
           <Text textTransform={"uppercase"} pb={3}>
             My skills cover key areas of web development, UI/UX design, and 3D
             art. I create functional and engaging projects using modern tools
@@ -47,15 +46,9 @@ function Skills() {
           </Text>
         </Container>
 
-        <HStack    
-          align="start" 
-          w="100%" 
-          justify="space-around" 
-          wrap="wrap"
-        >
+        <HStack align="start" w="100%" justify="space-around" wrap="wrap">
           {skills.map(createSkill)}
         </HStack>
-           
       </Container>
     </Center>
   );
