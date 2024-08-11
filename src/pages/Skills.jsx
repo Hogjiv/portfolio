@@ -1,6 +1,6 @@
 import React from "react";
-import CardComponent from "../CardComponent.jsx";
-import { skills } from "../../skills.js";
+import CardComponent from "../components/CardComponent.jsx";
+import { skills } from "../skills.js";
 import {
   Center,
   Text,
@@ -29,7 +29,7 @@ function Skills() {
         maxW="100%"
         p={4}
         minH="calc(100vh - 66px)"
-        pt={3}
+        pt={3}  
         display="flex"
         flexDirection="column"
         alignItems="center"

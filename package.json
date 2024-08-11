@@ -12,6 +12,7 @@
     "@fontsource/fjalla-one": "^5.0.13",
     "@fontsource/open-sans": "^5.0.28",
     "@fontsource/raleway": "^5.0.19",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

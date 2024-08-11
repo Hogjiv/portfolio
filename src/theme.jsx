@@ -1,43 +1,59 @@
-import { extendTheme } from "@chakra-ui/react";
+import { border, extendTheme } from "@chakra-ui/react";
+import { color } from "framer-motion";
 
 const theme = extendTheme({
   components: {
+    Link: {
+      baseStyle: {
+        fontSize: "20px",
+        textTransform: "uppercase", 
+        _hover: {
+          color: "#ECBFFC", // Цвет при наведении
+          fontSize: "24px",
+          transition: "font-size 0.7s ease, color 0.3s ease",  
+        },
+      },
+    },
     Button: {
       baseStyle: {
         fontWeight: "regular",
         fontFamily: "Fjalla One",
-        bg: "#ffc525",
         borderRadius: "0px",
       },
-      // 2. We can add a new button size or extend existing
       sizes: {
-        xl: {
-          h: "76px",
+        md: {
+          w: "200px",
+          h: "55px",
           fontSize: "lg",
           px: "22px",
         },
       },
-      // 3. We can add a new visual variant
       variants: {
         "with-shadow": {
-          bg: "blue.400",
+          bg: "#8C4DA3",
           boxShadow: "0 0 2px 2px #efdfde",
+          color: "white", // Цвет текста внутри кнопки
+          _hover: {
+            bg: "#7C3C8A", // Цвет при наведении
+          },
+          _active: {
+            bg: "#6C2C7A", // Цвет при клике
+          },
         },
-        // 4. We can override existing variants
         solid: (props) => ({
-          bg: props.colorMode === "dark" ? "green.200" : "blue.500",
+          bg: props.colorMode === "dark" ? "#C65FEB" : "#8C4DA3",
+          color: "white", // Цвет текста внутри кнопки
+          _hover: {
+            bg: props.colorMode === "dark" ? "#B34DDB" : "#7C3C8A",
+          },
+          _active: {
+            bg: props.colorMode === "dark" ? "#A23CCA" : "#6C2C7A", // Цвет при клике
+          },
         }),
-        // 5. We can add responsive variants
-        sm: {
-          bg: "teal.500",
-          fontSize: "md",
-        },
       },
-      // 6. We can overwrite defaultProps
       defaultProps: {
-        size: "lg", // default is md
-        variant: "sm", // default is solid
-        colorScheme: "green", // default is gray
+        size: "lg",
+        variant: "solid",
       },
     },
   },
@@ -100,6 +116,7 @@ const theme = extendTheme({
     white: "#FFFFFF",
     yellow: "#ffc525",
     violet: "#C65FEB",
+    lightOrange: "#e18127",
   },
   fonts: {
     body: "Barlow Semi Condensed, sans-serif",
